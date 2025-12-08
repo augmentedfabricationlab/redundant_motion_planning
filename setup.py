@@ -10,9 +10,19 @@ from os.path import abspath, basename, dirname, join, splitext
 from setuptools import find_packages, setup
 
 # NOTE: Write dependencies (i.e. http://python-packaging.readthedocs.io/en/latest/dependencies.html)
-requirements = []
-# NOTE: Write a list of keywords (i.e. ['ros', 'ros-bridge', 'robotics', 'websockets'])
-keywords_list = []
+requirements = [
+    'numpy',
+    'networkx',
+    'pybullet',
+    'compas>=2.0',
+    'compas_robots',
+    'compas_fab',
+    # Note: These dependencies are commented out as they require private repository access
+    # 'ur_fabrication_control
+    # 'mobile_robot_control
+    # 'fabrication_manager @ git+https://github.com/augmentedfabricationlab/fabrication_manager.git@compas2',
+]# NOTE: Write a list of keywords (i.e. ['ros', 'ros-bridge', 'robotics', 'websockets'])
+keywords_list = ['robotics', 'fabrication', 'path-planning', 'ur-robot', 'compas']
 
 here = abspath(dirname(__file__))
 
@@ -24,8 +34,15 @@ def read(*names, **kwargs):
     ).read()
 
 
-about = {}
-exec(read('src', 'redundant_motion_planning', '__version__.py'), about)
+about = {
+    '__title__': 'redundant_motion_planning',
+    '__version__': '1.0.0',
+    '__license__': 'MIT',
+    '__description__': 'A package for robotic fabrication path planning',
+    '__author__': 'David Richter',
+    '__author_email__': 'david.richter@tum.de',
+    '__url__': 'https://github.com/augmentedfabricationlab/redundant_motion_planning'
+}exec(read('src', 'redundant_motion_planning', '__version__.py'), about)
 
 setup(
     name=about['__title__'],
@@ -65,6 +82,23 @@ setup(
     ],
     keywords=keywords_list,
     install_requires=requirements,
-    extras_require={},
+    extras_require={
+        'rhino': [
+            'compas_rhino',
+            'compas_ghpython',
+        ],
+        'dev': [
+            'sphinx>=1.5',
+            'invoke>=0.14',
+            'bumpversion>=0.5',
+            'check-manifest>=0.36',
+            'flake8',
+            'autopep8',
+            'pylint',
+            'pytest',
+            'isort',
+            'twine',
+        ],
+    },
     entry_points={},
 )

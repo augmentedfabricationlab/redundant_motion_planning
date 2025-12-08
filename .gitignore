@@ -35,6 +35,15 @@ wheels/
 pip-log.txt
 pip-delete-this-directory.txt
 
+#  Image files
+
+# Data files
+
+*.gcode
+*.3dm
+*.3dmbak
+*.script
+
 # Unit test / coverage reports
 htmlcov/
 .tox/
