@@ -3,7 +3,7 @@ __description__ = 'Python-based framework designed for redundant motion planning
 __url__ = 'https://github.com/augmentedfabricationlab/redundant_motion_planning'
 __version__ = '1.0.0'
 __author__ = 'Augmented Fabrication Lab'
-__author_email__ = 'doerfler@tum.de'
+__author_email__ = 'david.richter@tum.de'
 __license__ = 'MIT license'
 __copyright__ = 'Copyright 2025 Augmented Fabrication Lab'
 
