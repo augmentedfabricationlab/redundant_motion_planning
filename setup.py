@@ -42,7 +42,8 @@ about = {
     '__author__': 'David Richter',
     '__author_email__': 'david.richter@tum.de',
     '__url__': 'https://github.com/augmentedfabricationlab/redundant_motion_planning'
-}exec(read('src', 'redundant_motion_planning', '__version__.py'), about)
+}
+exec(read('src', 'redundant_motion_planning', '__version__.py'), about)
 
 setup(
     name=about['__title__'],
