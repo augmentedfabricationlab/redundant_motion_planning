@@ -140,7 +140,7 @@ def get_data_path():
         package_path = os.path.abspath(os.path.join(package_path, ".."))
     
     if os.path.basename(os.getcwd()) == "redundant_motion_planning":
-            return os.path.join(cwd, "data")
+            return os.path.join(os.getcwd(), "data")
     else:
         package_path = os.path.dirname(__file__)
         package_path = os.path.abspath(os.path.join(package_path, "../../../rhino"))
