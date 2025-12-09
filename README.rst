@@ -17,10 +17,8 @@ redundant_motion_planning: Redundant motion planning
 Overview
 --------
 
-**Research Project [BLINDED]** is a Python-based framework designed for advanced motion planning and collision checking in robotic systems.
+**redundant_motion_planning** is a Python-based framework designed for advanced motion planning and collision checking in robotic systems.
 
-
-For the scope of this blinded repository, the functionality is limited to motion planning and collision checking for robotic arms. Other functionality like integration into design environments or fabrication planning and hardware control has been omitted, since they could not be provided in a standalone blinded form.
 
 Main Features
 -------------
@@ -147,7 +145,7 @@ Running the Complete Pipeline
 
 If your solutions JSON file is located at the expected path (``data/auto_generated/export/``), you can run the complete processing pipeline using::
 
-    python src/research_project/utilities/run_all.py
+    python src/redundant_motion_planning/utilities/run_all.py
 
 This automated pipeline performs three sequential steps:
 
@@ -173,19 +171,19 @@ This automated pipeline performs three sequential steps:
 Running Individual Steps
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You can also run each step individuall if the input files are located at the expected paths:
+You can also run each step individually if the input files are located at the expected paths:
 
 **Filter configurations**::
 
-    python src/research_project/utilities/preprocessing/edit.py
+    python src/redundant_motion_planning/utilities/preprocessing/edit.py
 
 **Collision checking only**::
 
-    python src/research_project/collision_checking/collision_checking_pybullet.py
+    python src/redundant_motion_planning/collision_checking/collision_checking_pybullet.py
 
 **Motion planning only**::
 
-    python src/research_project/motion_planning/graph_based_optimum.py
+    python src/redundant_motion_planning/motion_planning/graph_based_optimum.py
 
 Installation
 ------------
@@ -195,7 +193,16 @@ Quick Install from GitHub
 
 Install directly from GitHub without cloning::
 
-    pip install git+https://github.com/blindmenow/research_project
+    pip install git+https://github.com/augementedfabricationlab/redundant_motion_planning.git
+
+Test Installation
+~~~~~~~~~~~~~~~~~
+After installation , you can test if the package is correctly installed by running::
+    git clone https://github.com/augementedfabricationlab/redundant_motion_planning.git
+    cd redundant_motion_planning
+    python src/redundant_motion_planning/utilities/run_all.py this should run the complete pipeline on the provided test data without errors (there will be some fallback messages if you are not connected to a robot, which is expected).
+
+
 
 Dependencies
 ~~~~~~~~~~~~
