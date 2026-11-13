@@ -12,6 +12,10 @@ redundant_motion_planning: Redundant motion planning
     :target: https://travis-ci.org/augmentedfabricationlab/redundant_motion_planning
     :alt: Travis CI
 
+.. image:: https://zenodo.org/badge/DOI/10.5281/zenodo.24103241.svg
+    :target: https://doi.org/10.5281/zenodo.24103241
+    :alt: DOI
+
 .. end-badges
 
 Overview
@@ -226,7 +230,7 @@ We welcome contributions to improve the project. To contribute, please follow th
 2. Create a new branch for your feature or bugfix.
 3. Make your changes and commit them with descriptive messages.
 4. Push your changes to your fork.
-5. Create a pull request to the main repository.
+5. Create a pull request.
 
 For detailed guidelines, refer to the `CONTRIBUTING.rst` file.
 
